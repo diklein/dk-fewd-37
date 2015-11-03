@@ -39,9 +39,15 @@ h1 {
 }
 ul {
    list-style: circle outside none;
+   margin-bottom: 40px;
 }
 li {
    padding-top: 2px;
+}
+img {
+   margin-top: 20px;
+   border-radius: 100%;
+   box-shadow: 0px 4px 8px rgba(0,0,0,0.40)
 }
 @keyframes fadein {
   from { opacity: 0; }
