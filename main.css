@@ -5,6 +5,17 @@ body {
   -webkit-animation: fadein 2s;
   animation: fadein 2s;
 }
+a {
+   background-position: 0 1.375rem;
+   background-size: 1px 1px;
+   color: #fff;
+   background-image: linear-gradient(#fff 50%, #fff 50%);
+   background-repeat: repeat-x;
+}
+a:hover {
+  color: rgba(255,255,255,0.8);
+  background-image: linear-gradient(#fff 50%, rgba(255,255,255,0.8) 50%);
+}
 h1 {
   text-align: left;
   font-size: 44px;
