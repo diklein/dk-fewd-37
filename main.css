@@ -28,9 +28,14 @@ h1 {
 .text, ul {
   font-size: 16px;
   font-weight: normal;
+  line-height: 24px;
 }
 ul {
    list-style: circle outside none;
+   margin-top: -8px;
+}
+li {
+   padding-top: 2px;
 }
 @keyframes fadein {
   from { opacity: 0; }
