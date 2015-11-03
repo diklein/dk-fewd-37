@@ -2,13 +2,13 @@ body {
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   color: #fff;
   background-color: grey;
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
 }
 h1 {
   text-align: left;
   font-size: 44px;
   font-weight: 200;
-  -webkit-animation: fadein 2s;
-  animation: fadein 2s;
 }
 .area {
   max-width: 500px;
@@ -16,8 +16,6 @@ h1 {
 }
 .text, ul {
   font-size: 16px;
-  -webkit-animation: fadein 2s;
-  animation: fadein 2s;
 }
 @keyframes fadein {
   from { opacity: 0; }
