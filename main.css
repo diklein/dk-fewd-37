@@ -1,6 +1,5 @@
 body {
-  /*font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;*/
-  font-family: tahoma;
+  font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
   color: #fff;
   background-color: grey;
   -webkit-animation: fadein 2s;
