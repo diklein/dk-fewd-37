@@ -19,7 +19,7 @@ a:hover {
 h1 {
   text-align: left;
   font-size: 44px;
-  font-weight: 200;
+  font-weight: 700;
 }
 .area {
   max-width: 500px;
@@ -27,6 +27,7 @@ h1 {
 }
 .text, ul {
   font-size: 16px;
+  font-weight: normal;
 }
 @keyframes fadein {
   from { opacity: 0; }
