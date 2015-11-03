@@ -4,7 +4,7 @@ body {
   background-color: grey;
 }
 h1 {
-  text-align:center;
+  text-align: left;
   font-size: 44px;
   font-weight: 200;
   -webkit-animation: fadein 2s;
