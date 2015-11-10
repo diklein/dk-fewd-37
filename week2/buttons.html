@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <style media="screen">
+         .button {
+            background: linear-gradient(to bottom, #87e0fd 0%,#05abe0 100%);
+            border: 1px solid black;
+            color: #fff;
+            font-family: arial;
+            font-size: 18px;
+            margin: 4px;
+            padding: 1em;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 10px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5)
+         }
+         .button:hover {
+            background: linear-gradient(to bottom, #05abe0 0%,#87e0fd 100%);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            text-shadow: 0 -1px 2px rgba(0,0,0,0.5)
+         }
+         .danger-zone {
+            background: red;
+         }
+         .button-small {
+            font-size: 36px;
+         }
+      </style>
+   </head>
+   <body>
+      <a href="#" class="button">Click me</a>
+      <button type="button" name="button" class="button danger-zone">Click me</button>
+      <input type="submit" name="name" value="Click me" class="button button-small">
+   </body>
+</html>
