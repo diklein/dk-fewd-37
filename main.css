@@ -31,6 +31,9 @@ h1 {
    margin: 100px auto 0 auto;
    padding: 0 40px 0 40px;
 }
+.area img {
+   margin-bottom: 40px;
+}
 .text, ul {
    font-size: 16px;
    font-weight: normal;
