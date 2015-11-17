@@ -1,4 +1,5 @@
 <script type="text/javascript">
+
    var firstName = "David";
    var lastName = "Klein";
    var fullName = firstName + " " + lastName;
@@ -14,7 +15,7 @@
    // lastName = prompt("Type in your last name");
    // var uhoh = alert(firstName+" "+lastName);
 
-   // var kilometer = prompt("Enter kilometers");
+   //var kilometer = prompt("Enter kilometers");
    // var half = kilometer / 2;
    // var quarter = half / 4;
    // var mile = alert(quarter + half);
@@ -25,5 +26,28 @@
       var mile = quarter + half;
       return mile;
    }
+
+   function convertMilesToInches(miles) {
+      return miles * 5280 * 12;
+   }
+
+   function calcTurkeyCookTime(size, stuffed) {
+      if ( stuffed ) {
+         return ((size * 28) + 108) + " minutes";
+      }
+      else {
+         return ((size * 19) + 124) + " minutes";
+      }
+   }
+
+   function calcSavings(monthlySave, months) {
+      return monthlySave * months;
+   }
+
+   function convertDollartoEuro(dollar) {
+      return dollar * 0.938110;
+   }
+
+
 
 </script>

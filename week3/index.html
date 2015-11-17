@@ -1,0 +1,27 @@
+<ul>
+
+</ul>
+
+<script type="text/javascript">
+
+   function createListItem (textContent) {
+
+      // Create a new <li>
+      var newListItem = document.createElement("li");
+
+      // Set its textContent to whatever you want
+      newListItem.textContent = textContent;
+
+      // Get the <ul>
+      var parentList = document.querySelector("ul");
+
+      // Append the new <li> to the <ul>
+      parentList.appendChild(newListItem);
+
+   }
+
+   for(var i = 0; i <= 100; i++ ) {
+      createListItem(i);
+   }
+
+</script>
