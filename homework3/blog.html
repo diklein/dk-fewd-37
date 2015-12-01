@@ -90,11 +90,7 @@
       </div>
 
       <div id="comments">
-        <!--
-        <div class="comment">
-          You're looking good!
-        </div>
-        -->
+
       </div>
 
       <form id="new-comment">
@@ -104,10 +100,8 @@
     </main>
 
     <script>
-    
       var link = document.querySelector(".like-link");
       var form = document.querySelector("#new-comment");
-
       link.addEventListener("click", like);
       form.addEventListener("submit", comment);
 
@@ -124,6 +118,7 @@
         newDiv.classList.add("comment");
         var commentParent = document.querySelector("#comments");
         commentParent.appendChild(newDiv);
+        document.querySelector("#new-comment-body").value = "";
       }
 
     </script>
