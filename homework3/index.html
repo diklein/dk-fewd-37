@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ACME Corp - Home</title>
+   <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+   <script type="text/javascript">
+
+   // header
+   var body = document.querySelector("body");
+   var header = document.createElement("header");
+   body.appendChild(header);
+
+   // header › logo
+   var logo = document.createElement("img");
+   logo.setAttribute("src","images/logo.jpg");
+   logo.setAttribute("width","200");
+   logo.setAttribute("height","55");
+   header.appendChild(logo);
+
+   // header › nav
+   var nav = document.createElement("nav");
+   header.appendChild(nav);
+
+   // nav › ul
+   var ul = document.createElement("ul");
+   nav.appendChild(ul);
+
+   // ul › li
+   var li1 = document.createElement("li");
+   ul.appendChild(li1);
+
+   // li › products link
+   var link = document.createElement("a");
+   link.textContent = "Products";
+   link.setAttribute("href","products.html")
+   li1.appendChild(link);
+
+   // ul › li
+   var li2 = document.createElement("li");
+   ul.appendChild(li2);
+
+   // li › sign up button
+   var button = document.createElement("button");
+   button.textContent = "Sign Up";
+   li2.appendChild(button);
+
+   // main
+   var main = document.createElement("main");
+   body.appendChild(main);
+
+   // section
+   var section = document.createElement("section");
+   main.appendChild(section);
+
+   // h1
+   var h1 = document.createElement("h1");
+   h1.textContent = "Welcome to ACME Corp!";
+   section.appendChild(h1);
+
+   // p's
+   var p1 = document.createElement("p");
+   p1.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis autre irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fagiat nulla pariatur.";
+   section.appendChild(p1);
+
+   var p2 = document.createElement("p");
+   p2.textContent = "Excepteur sint occeacat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+   section.appendChild(p2);
+
+   // footer
+   var footer = document.createElement("footer");
+   body.appendChild(footer);
+
+   // copyright
+   var copyright = document.createElement("p");
+   copyright.textContent = "Copyright, 2015";
+   footer.appendChild(copyright);
+
+   </script>
+
+</body>
+</html>

@@ -4,24 +4,35 @@
 
 <script type="text/javascript">
 
-   function createListItem (textContent) {
+   function makeElementWithTextContent (tagName, text, parent) {
 
-      // Create a new <li>
-      var newListItem = document.createElement("li");
+      // TASK: Create a new <li>
+      // createElement is a function that returns a new <li>
+      // The quotes around the li makes it an object literal
+      var newElement = document.createElement(tagName);
 
-      // Set its textContent to whatever you want
-      newListItem.textContent = textContent;
+      // TASK: Set its textContent to whatever you want
+      // New list item's text content
+      newElement.textContent = text;
 
-      // Get the <ul>
-      var parentList = document.querySelector("ul");
+      // TASK: Get the <ul>
+      // querySelector is a function that returns the first <ul>
+      // Element that matches the css selector (key to find or identify any element)
+      // Document refers to the DOM / html / whole page / object
+      var elementParent = document.querySelector(parent);
 
-      // Append the new <li> to the <ul>
-      parentList.appendChild(newListItem);
+      // TASK: Append the new <li> to the <ul>
+      // Puts the element on the page because the <ul> is in the DOM
+      elementParent.appendChild(newElement);
+
+      return newElement;
 
    }
 
-   for(var i = 0; i <= 100; i++ ) {
-      createListItem(i);
+   //makeElementWithTextContent("li", "hello", "ul");
+
+   for(var i = 0; i < 10; i++ ) {
+      makeElementWithTextContent("li", i, "ul");
    }
 
 </script>

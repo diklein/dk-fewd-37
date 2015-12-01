@@ -1,0 +1,58 @@
+<style media="screen">
+
+   .done {
+      color: grey;
+      text-decoration: line-through;
+   }
+
+   li {
+      list-style: none;
+      border-bottom: 1px solid gray;
+      border-left: 1px solid gray;
+      border-right: 1px solid gray;
+      padding: 8px;
+      width: 70px;
+      text-align: center;
+      cursor: pointer;
+   }
+
+   li:hover {
+      background-color: #f0f0f0;
+   }
+
+   li:first-child {
+      border-top: 1px solid gray;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+   }
+
+   li:first-child {
+      border-top: 1px solid gray;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+   }
+
+</style>
+
+<ul>
+   <li>one</li>
+   <li>two</li>
+   <li>three</li>
+</ul>
+
+<script type="text/javascript">
+
+   var listItem1 = document.querySelector("li:nth-child(1)");
+   var listItem2 = document.querySelector("li:nth-child(2)");
+   var listItem3 = document.querySelector("li:nth-child(3)");
+   //listeItem.setAttribute("style","color: red;");
+
+   listItem1.addEventListener("click", itemClicked);
+   listItem2.addEventListener("click", itemClicked);
+   listItem3.addEventListener("click", itemClicked);
+
+   function itemClicked(event) {
+      event.target.classList.add("done");
+   }
+
+</script>
