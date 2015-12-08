@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title></title>
+   <style media="screen">
+   * { box-sizing: border-box; }
+   body { font-size: 20px; font-family: sans-serif; }
+
+   td { width: 100px; text-align: center; }
+   .placeholder, button { width: 100%; }
+   .placeholder { height: 23px; border: 1px solid #bababa; border-radius: 3px; }
+   button { cursor: pointer; border: 1px solid #58c0f5; color: #58c0f5; background-color: white; font: inherit; }
+   button { background-color: #58c0f5; color: white; border-radius: 3px; }
+   </style>
+</head>
+<body>
+   <table>
+      <tr>
+         <td>
+            <input type="text" class="first-operand placeholder" placeholder="Operand 1">
+         </td>
+         <td>
+            <input type="text" class="second-operand placeholder" placeholder="Operand 2">
+         </td>
+         <td>
+            =
+         </td>
+         <td>
+            <input type="text" class="result placeholder" placeholder="Result" disabled>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <button class="add-button inverted-button">+</button>
+         </td>
+         <td>
+            <button class="subtract-button inverted-button">-</button>
+         </td>
+         <td>
+            <button class="multiply-button inverted-button">*</button>
+         </td>
+         <td>
+            <button class="divide-button inverted-button">/</button>
+         </td>
+      </tr>
+   </table>
+</body>
+
+<script type="text/javascript">
+
+      var o1 = parseInt(document.querySelector(".first-operand"));
+      var o2 = parseInt(document.querySelector(".second-operand"));
+      var result = document.querySelector(".result");
+
+      var addButton = document.querySelector(".add-button");
+      var subtractButton = document.querySelector(".subtract-button");
+      var multiplyButton = document.querySelector(".multiply-button");
+      var divideButton = document.querySelector(".divide-button");
+
+      addButton.addEventListener("click", add);
+      subtractButton.addEventListener("click", subtract);
+      multiplyButton.addEventListener("click", multiply);
+      divideButton.addEventListener("click", divide);
+
+      function add(event) {
+         event.preventDefault();
+         document.querySelector(".result").value = parseInt(document.querySelector(".first-operand").value) + parseInt(document.querySelector(".second-operand").value);
+      }
+
+      function subtract(event) {
+         event.preventDefault();
+         document.querySelector(".result").value = parseInt(document.querySelector(".first-operand").value) - parseInt(document.querySelector(".second-operand").value);
+      }
+
+      function multiply(event) {
+         event.preventDefault();
+         document.querySelector(".result").value = parseInt(document.querySelector(".first-operand").value) * parseInt(document.querySelector(".second-operand").value);
+      }
+
+      function divide(event) {
+         event.preventDefault();
+         document.querySelector(".result").value = parseInt(document.querySelector(".first-operand").value) / parseInt(document.querySelector(".second-operand").value);
+      }
+
+</script>
+
+</html>
