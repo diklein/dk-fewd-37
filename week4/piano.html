@@ -57,7 +57,15 @@ var howl = new Howl({
 
 <script>
 
-   $(".key").on("click", play)
+   //$(".key").on("click", play)
+
+   var keys = document.querySelectorAll(".key");
+   var key1 = keys[0].textContent;
+
+   for (var i = 0; i < keys.length; i++) {
+      keys[i].addEventListener("click", playnote);
+   }
+
 
    var button = document.querySelector("#C");
    button.addEventListener("click", play);

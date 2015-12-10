@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <style media="screen">
+         body {
+            background-color: rgba(0,0,0,0.1);
+            font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
+            line-height: 20px;
+         }
+         .container {
+            margin: 50px 0 0 50px;
+         }
+         .text {
+            width: 500px;
+            background-color: white;
+            padding: 2px 20px 2px 20px;
+            border-radius: 12px;
+            position: relative;
+         }
+         .text::after {
+            content: "";
+            position: absolute;
+            left: 400px;
+            width: 0;
+            height: 0;
+            border: 10px solid purple;
+            border-top-color: white;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+         }
+         .author {
+            margin-top: 16px;
+            margin-left: 370px;
+         }
+         
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="text">
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+         </div>
+         <!--div class="triangle"></div-->
+         <div class="author">
+            David Klein
+         </div>
+      </div>
+   </body>
+</html>

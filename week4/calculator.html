@@ -65,22 +65,22 @@
 
       function add(event) {
          event.preventDefault();
-         document.querySelector(".result").value = parseInt(document.querySelector(".first-operand").value) + parseInt(document.querySelector(".second-operand").value);
+         document.querySelector(".result").value = parseFloat(document.querySelector(".first-operand").value) + parseFloat(document.querySelector(".second-operand").value);
       }
 
       function subtract(event) {
          event.preventDefault();
-         document.querySelector(".result").value = parseInt(document.querySelector(".first-operand").value) - parseInt(document.querySelector(".second-operand").value);
+         document.querySelector(".result").value = parseFloat(document.querySelector(".first-operand").value) - parseFloat(document.querySelector(".second-operand").value);
       }
 
       function multiply(event) {
          event.preventDefault();
-         document.querySelector(".result").value = parseInt(document.querySelector(".first-operand").value) * parseInt(document.querySelector(".second-operand").value);
+         document.querySelector(".result").value = parseFloat(document.querySelector(".first-operand").value) * parseFloat(document.querySelector(".second-operand").value);
       }
 
       function divide(event) {
          event.preventDefault();
-         document.querySelector(".result").value = parseInt(document.querySelector(".first-operand").value) / parseInt(document.querySelector(".second-operand").value);
+         document.querySelector(".result").value = parseFloat(document.querySelector(".first-operand").value) / parseFloat(document.querySelector(".second-operand").value);
       }
 
 </script>

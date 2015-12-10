@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>stop light</title>
+   <style media="screen">
+      .button-row {
+         margin-top: 40px;
+         text-align: center;
+      }
+      .container {
+         margin: 40px auto;
+         width: 160px;
+         background-color: #f2c500;
+         border-radius: 18px;
+         padding: 10px 0 10px 0;
+         border: 1px solid #d7b51e;
+      }
+      .light {
+         background-color: #6f5800;
+         border-radius: 100%;
+         width: 100px;
+         height: 100px;
+         margin: 20px auto 20px auto;
+         border: 1px solid #462c00;
+         box-shadow: inset 0 4px 0 #000000;
+      }
+      .stop-light-on {
+         background-color: #e44203;
+         box-shadow: inset 0 4px 0 #000000, 0 5px 20px rgba(228, 66, 3, 0.4);
+         webkit-transition: background-color 200ms;
+         transition: background-color 200ms;
+      }
+      .slow-light-on {
+         background-color: #ffec2d;
+         box-shadow: inset 0 4px 0 #000000, 0 5px 20px rgba(255, 236, 45, 0.4);
+         webkit-transition: background-color 200ms;
+         transition: background-color 200ms;
+      }
+      .go-light-on {
+         background-color: #00ba2a;
+         box-shadow: inset 0 4px 0 #000000, 0 5px 20px rgba(0, 186, 42, 0.4);
+         webkit-transition: background-color 200ms;
+         transition: background-color 200ms;
+      }
+      .caution-light-on {
+         -webkit-animation: pulse 700ms infinite alternate;
+      }
+      @-webkit-keyframes pulse {
+         0% {
+            background-color: #6f5800;
+            box-shadow: inset 0 4px 0 #000000;
+         }
+         100% {
+            background-color: #ffec2d;
+            box-shadow: inset 0 4px 0 #000000, 0 5px 20px rgba(255, 236, 45, 0.4);
+         }
+      }
+   </style>
+</head>
+<body>
+   <div class="button-row">
+      <button type="button" class="stop-btn">Stop</button>
+      <button type="button" class="slow-btn">Slow</button>
+      <button type="button" class="go-btn">Go</button>
+      <button type="button" class="caution-btn">Caution</button>
+   </div>
+   <div class="container">
+      <div class="light stop-light-default"></div>
+      <div class="light slow-light-default"></div>
+      <div class="light go-light-default"></div>
+   </div>
+
+   <script type="text/javascript">
+
+      var stopLightBtn = document.querySelector(".stop-btn");
+      var stopLight = document.querySelector(".stop-light-default")
+      stopLightBtn.addEventListener("click", thereCanOnlyBeOne);
+
+      var slowLightBtn = document.querySelector(".slow-btn");
+      var slowLight = document.querySelector(".slow-light-default")
+      slowLightBtn.addEventListener("click", thereCanOnlyBeOne);
+
+      var goLightBtn = document.querySelector(".go-btn");
+      var goLight = document.querySelector(".go-light-default")
+      goLightBtn.addEventListener("click", thereCanOnlyBeOne);
+
+      var cautionLightBtn = document.querySelector(".caution-btn");
+      cautionLightBtn.addEventListener("click", thereCanOnlyBeOne);
+
+      function thereCanOnlyBeOne(event) {
+         event.preventDefault();
+         turnAllLightsOff();
+
+         var tempLight = event.target.textContent;
+         if(tempLight == "Stop") {
+            stopLight.classList.add("stop-light-on");
+         }
+         if(tempLight == "Slow") {
+            slowLight.classList.add("slow-light-on");
+         }
+         if(tempLight == "Go") {
+            goLight.classList.add("go-light-on");
+         }
+         if(tempLight == "Caution") {
+            slowLight.classList.add("caution-light-on");
+         }
+      }
+
+      function turnAllLightsOff() {
+         stopLight.classList.remove("stop-light-on");
+         slowLight.classList.remove("slow-light-on");
+         goLight.classList.remove("go-light-on");
+         slowLight.classList.remove("caution-light-on");
+      }
+
+   </script>
+</body>
+</html>
