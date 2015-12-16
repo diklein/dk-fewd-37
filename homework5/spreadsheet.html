@@ -1,0 +1,86 @@
+<html>
+<head>
+   <style>
+      body {
+         font-family: sans-serif;
+         margin: 2em 4em;
+      }
+      table {
+         margin-bottom: 1em;
+      }
+      td {
+         border: 1px solid #ccc;
+         padding: 1em;
+      }
+      button {
+         border: 1px solid rgba(0, 0, 0, 0.2);
+         border-bottom-width: 2px;
+         border-radius: 5px; font-size: inherit;
+         color: white;
+         background-color: #049cd8;
+         padding: .5em 1em;
+         cursor: pointer;
+      }
+   </style>
+</head>
+<body>
+   <h1>Spreadsheet</h1>
+
+   <table>
+      <tbody>
+         <tr>
+            <td>1</td>
+            <td contenteditable>Avand</td>
+            <td contenteditable>Instructor</td>
+         </tr>
+         <tr>
+            <td>2</td>
+            <td contenteditable>Sandi</td>
+            <td contenteditable>TA</td>
+         </tr>
+         <tr>
+            <td>3</td>
+            <td contenteditable>Yana</td>
+            <td contenteditable>Student</td>
+         </tr>
+         <tr>
+            <td>4</td>
+            <td contenteditable>Maks</td>
+            <td contenteditable>Student</td>
+         </tr>
+      </tbody>
+   </table>
+
+   <button id="add-row">Add a Row</button>
+   <button id="add-column">Add a Column</button>
+
+   <script>
+      // make event listeners
+      var addRow = document.querySelector("#add-row");
+      var addColumn = document.querySelector("#add-column")
+      addRow.addEventListener("click", addNewRow);
+      addColumn.addEventListener("click", addNewColumn);
+
+      function addNewRow() {
+         var rows = document.querySelectorAll('tr').length;
+         var columns = document.querySelectorAll('td').length / rows;
+         var table = document.querySelector("table");
+         var newRow = document.createElement("tr");
+         for (var i = 0; i < columns; i++) {
+            var newCell = document.createElement("td");
+            newRow.appendChild(newCell);
+         };
+         newRow.firstChild.textContent = rows+1;
+         table.appendChild(newRow);
+      };
+
+      function addNewColumn() {
+         var allRows = document.querySelectorAll('tr');
+         for (var i = 0; i < allRows.length; i++) {
+            var newCell = document.createElement("td");
+            allRows[i].appendChild(newCell);
+         };
+      };
+   </script>
+</body>
+</html>
