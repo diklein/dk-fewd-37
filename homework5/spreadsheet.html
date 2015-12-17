@@ -9,7 +9,8 @@
          margin-bottom: 1em;
       }
       td {
-         border: 1px solid #ccc;
+         /* border: 1px solid #ccc; safari doesn't render borders for empty cells */
+         box-shadow: inset 0 0 1px #000;
          padding: 1em;
       }
       button {
@@ -55,7 +56,6 @@
    <button id="add-column">Add a Column</button>
 
    <script>
-
       // make event listeners
       var addRow = document.querySelector("#add-row");
       var addColumn = document.querySelector("#add-column")
