@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+   <script src="http://f.cl.ly/items/2K2Z2g0L3v1q1I413j1O/strftime%20githubcomsamsonjsstrf.txt"></script>
+   <title>Firebase Chat</title>
+   <style media="screen">
+
+      body {
+         background-color: #dae4ec;
+         font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", "Lucida Grande";
+         margin: 0;
+      }
+
+      .chat {
+         padding-bottom: 100px;
+      }
+
+      .main-form {
+         background-color: #676b6f;
+         position: fixed;
+         left: 0px;
+         bottom: 0px;
+         width: 100%;
+         padding: 24px 12px;
+      }
+
+      input {
+         height: 40px;
+         font-size: 24px;
+         border-radius: 6px;
+         border: 1px solid #000;
+         padding: 0;
+         display: inline-block;
+         position: relative;
+         width: calc(100% - 118px);
+      }
+
+      button {
+         height: 42px;
+         border-radius: 6px;
+         border: 1px solid #0c384d;
+         font-size: 18px;
+         font-weight: bold;
+         color: #fff;
+         margin-left: 12px;
+         margin-right: 24px;
+         width: 80px;
+         background: linear-gradient(to bottom, #1eafd7 0%,#2a91c9 100%);
+         padding: 0;
+         display: inline-block;
+         position: relative;
+         float: right;
+      }
+
+      .main-form div {
+         display: inline-block;
+         position: relative;
+         width: 12px;
+      }
+
+      .space-left {
+         float: left;
+      }
+
+      .space-right {
+         float: right;
+      }
+
+      .message {
+         background-color: #f9fcff;
+         padding: 12px;
+         margin: 12px;
+         color: #333;
+         font-size: 24px;
+         border-radius: 6px;
+      }
+
+      .username {
+         float: left;
+         margin-left: 40px;
+         margin-top: 8px;
+         color: #333;
+         font-size: 14px;
+         font-weight: bold;
+      }
+
+      .time {
+         float: right;
+         margin-right: 12px;
+         font-size: 14px;
+         color: #828b94;
+      }
+
+      .container {
+         margin-bottom: 48px;
+      }
+
+      .arrow {
+	      width: 0;
+	      height: 0;
+	      border-left: 12px solid transparent;
+	      border-right: 12px solid transparent;
+	      border-top: 12px solid #f9fcff;
+         margin-left: 36px;
+         margin-top: -12px;
+      }
+
+      .no-messages {
+         text-align: center;
+         margin-top: 200px;
+         font-size: 24px;
+         color: #999;
+      }
+
+      .hide {
+         display: none;
+      }
+
+   </style>
+</head>
+
+<body>
+   <div class="no-messages">
+      No messages
+   </div>
+   <div class="chat">
+
+   </div>
+
+   <form class="main-form">
+      <div class="space-right"></div><input type="text" class="form-message"><div class="space-left"></div>
+      <button type="submit">Send</button>
+   </form>
+
+   <script type="text/javascript">
+
+      // username setup
+      var username = localStorage.getItem("username");
+      if (username == null) {
+         username = prompt("what is your username?");
+         localStorage.setItem("username", username);
+      }
+
+      // new firebase and form listening
+      var firebase = new Firebase("https://blinding-inferno-7422.firebaseio.com");
+      var form = document.querySelector(".main-form");
+      form.addEventListener("submit", sendMessage);
+
+      // listen for new messages
+      firebase.on('child_added', createMessage);
+      function createMessage(snapshot) {
+
+         // check if there are messages and hide "No messages"
+         var messageData = snapshot.val();
+         if(messageData) {
+            document.querySelector(".no-messages").classList.add("hide");
+         }
+
+         // set up variables
+         var divContainer = document.createElement("div");
+         var divText = document.createElement("div");
+         var divUsername = document.createElement("div");
+         var divTime = document.createElement("div");
+         var divData = document.createElement("div");
+         var divArrow = document.createElement("div");
+
+         // append divs
+         divText.textContent = messageData.messageBody;
+         divUsername.textContent = messageData.username;
+         divContainer.appendChild(divText);
+         divContainer.appendChild(divArrow);
+         divData.appendChild(divUsername);
+
+         if(messageData.createdAt) {
+            // only show time if time exists
+            var createdAt = new Date(messageData.createdAt);
+            divTime.textContent = strftime('%a %l:%M%P', createdAt);
+            divData.appendChild(divTime);
+         }
+
+         divContainer.appendChild(divData);
+         document.querySelector(".chat").appendChild(divContainer);
+
+         // add classes
+         divUsername.classList.add("username");
+         divText.classList.add("message");
+         divTime.classList.add("time");
+         divContainer.classList.add("container");
+         divArrow.classList.add("arrow");
+
+         // scroll to bottom
+         window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+
+      }; // end of listening
+
+      // send message
+      function sendMessage(event) {
+         event.preventDefault();
+         var now = new Date();
+         var message = {
+            username: username,
+            messageBody: document.querySelector(".form-message").value,
+            createdAt: now.getTime()
+         };
+         firebase.push(message);
+         form.reset();
+
+         // scroll to bottom
+         window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+
+      }; // end of sending message
+
+   </script>
+</body>
+</html>

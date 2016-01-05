@@ -78,3 +78,37 @@ footer p {
    text-shadow: 0 1px 0 #fff;
    text-align: center;
 }
+@media (max-width: 500px) {
+   button {
+      color: #fff;
+      font-size: 16px;
+      text-decoration: none;
+      text-shadow: 0 1px 0px rgba(0,0,0,0.5);
+      background: none;
+      border: none;
+      font-weight: bold;
+      margin-left: 0;
+      padding: 12px 10px 12px 10px;
+   }
+   header img {
+      padding-left: 10px;
+      width: 140px;
+      height: 39px;
+   }
+   nav {
+      margin-right: 10px;
+   }
+   header {
+      height: 60px;
+   }
+   ul {
+      margin-top: 8px;
+   }
+   section {
+      padding: 20px;
+   }
+   main {
+      width: 90%;
+      margin-top: 20px;
+   }
+}
