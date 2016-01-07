@@ -176,8 +176,7 @@
          divContainer.classList.add("container");
          divArrow.classList.add("arrow");
 
-         // scroll to bottom
-         window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+         scrollToBottom();
 
       }; // end of listening
 
@@ -192,11 +191,13 @@
          };
          firebase.push(message);
          form.reset();
-
-         // scroll to bottom
-         window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+         scrollToBottom();
 
       }; // end of sending message
+
+      function scrollToBottom() {
+         window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+      };
 
    </script>
 </body>

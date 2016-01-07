@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+   </head>
+   <body>
+      <script>
+
+         $.get("http://omdbapi.com/?s=matrix", resultsReceived);
+         function resultsReceived(results) {
+            for (var i = 0; i < results.Search.length; i++) {
+               // console.log(i, results["Search"][i]["Title"]);
+               console.log(i, results.Search[i].Title);
+            };
+         };
+
+      </script>
+   </body>
+</html>
