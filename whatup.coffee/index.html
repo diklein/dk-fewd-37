@@ -58,6 +58,13 @@
                <img src="http://placehold.it/600x600" alt="hario stand" width="600px" height="600px" class="content-img" />
             </section>
             <section class="main">
+               <p class="headline">Kettle</p>
+               <p class="content">
+                  The water's temperature should be just under boiling. If it's too hot you will burn the grounds. That's why you need a <a href="http://www.amazon.com/Bonavita-Variable-Temperature-Electric-Gooseneck/dp/B005YR0F40/ref=sr_1_4?ie=UTF8&qid=1453345254&sr=8-4&keywords=hario+kettle">Bonavita Variable Temperature Kettle</a> which can precisely heat water between the preferable range of 195°F and 205°F. I recommend 205°F, but this another area you can feel free to experiment with.
+               </p>
+               <img src="http://placehold.it/600x600" alt="bonavita kettle" width="600px" height="600px" class="content-img" />
+            </section>
+            <section class="main">
                <p class="headline">Water</p>
                <p class="content">
                   Coffee, like your bod, is primarily water, and that water better be clean. The <a href="http://www.amazon.com/Soma-Sustainable-Carafe-Plant-Based-Filter/dp/B00WFY7LCE/ref=sr_1_4?ie=UTF8&qid=1453343798&sr=8-4&keywords=soma+water+filter">Soma Carafe</a> is the only filter that is elegant enough to stand next to the Hario setup.
@@ -77,18 +84,57 @@
                <a href="/" class="next-btn" id="go-make">Make&nbsp;&#8594;</a>
             </div>
             <section class="main">
-               <p class="headline">Prep that ish</p>
+               <p class="headline">Insert the filter</p>
                <p class="content">
-                  content
+                  Place a mug on top of the stand's drip tray, and insert a filter into the V60.<br />
                </p>
-               <img src="http://placehold.it/600x600" alt="hario v60" width="600px" height="600px" class="content-img" />
+               <img src="http://placehold.it/600x600" alt="insert filter" width="600px" height="600px" class="content-img" />
             </section>
             <section class="main">
-               <p class="headline">Grounds</p>
+               <p class="headline">Heat it up</p>
                <p class="content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Heat the water to 205°F.
                </p>
-               <img src="http://placehold.it/600x600" alt="coffee grounds" width="600px" height="600px" class="content-img" />
+               <img src="http://placehold.it/600x600" alt="heat the water" width="600px" height="600px" class="content-img" />
+            </section>
+            <section class="main">
+               <p class="headline">Soak the filter</p>
+               <p class="content">
+                  Pour several drops of water onto the filter to soak it.<br />
+                  Don't forget to empty the water from your mug otherwise you'll dilute the coffee.
+               </p>
+               <img src="http://placehold.it/600x600" alt="soak the filter" width="600px" height="600px" class="content-img" />
+            </section>
+            <section class="main">
+               <p class="headline">Weigh the grounds</p>
+               <p class="content">
+                  Turn on the scale so it reads 0.0 grams.<br />
+                  Pour the grounds into the V60 until the scale reads 25.0 grams. It's okay if you're off by a tenth of a gram. Don't be so hard on yourself.
+               </p>
+               <img src="http://placehold.it/600x600" alt="weigh the grounds" width="600px" height="600px" class="content-img" />
+            </section>
+            <section class="main">
+               <p class="headline">Bloom</p>
+               <p class="content">
+                  Reset the scale so it reads 0.0 again.<br />
+                  Slowly pour the hot water onto the grounds in a circular motion. Stop once you get all of the grounds wet. Aim for only pouring 60 grams of water during this first pour. The goal is to get the grounds to wake up.
+               </p>
+               <img src="http://placehold.it/600x600" alt="first pour" width="600px" height="600px" class="content-img" />
+            </section>
+            <section class="main">
+               <p class="headline">Stir</p>
+               <p class="content">
+                  After your grounds have bloomed, scoop each quarter of the filter with a spoon.
+               </p>
+               <img src="http://placehold.it/600x600" alt="stir grounds" width="600px" height="600px" class="content-img" />
+            </section>
+            <section class="main">
+               <p class="headline">Continue pouring</p>
+               <p class="content">
+                  Continue pouring slowly in a circular motion until the scale says 400 grams. Don't pour water directly on the filter. The entire process from the first drop on the grounds to 400 grams should take between 2:30 and 3:00 minutes.<br />
+                  Don't worry; the next screen will walk you through this process!
+               </p>
+               <img src="http://placehold.it/600x600" alt="stir grounds" width="600px" height="600px" class="content-img" />
             </section>
          </div>
       </div>
@@ -105,8 +151,8 @@
             <section class="main">
                <p class="headline">Soak filter</p>
                <button class="action-btn" id="soak-btn">Done</button>
-               <p class="headline">Bloom</p>
-               <button class="action-btn" id="bloom-btn">Done</button>
+               <!-- p class="headline">Bloom</p>
+               <button class="action-btn" id="bloom-btn">Done</button -->
                <p class="headline">Pour</p>
                <button class="action-btn" id="pour-btn">Start</button>
                <p class="headline">Enjoy</p>
@@ -117,7 +163,7 @@
 
       <!-- timer -->
       <div class="timer-modal hide" id="timer-modal">
-         <div class="timer-value"><span id="minutes"></span><span id="colon">:</span><span id="seconds"></span></div>
+         <div class="timer-value"><span id="minutes">&nbsp;&nbsp;</span><span id="colon">:</span><span id="seconds">&nbsp;&nbsp;</span></div>
          <div class="clear"></div>
          <button class="action-btn close-btn" id="close-btn">Done</button>
       </div>
@@ -161,8 +207,8 @@
          makeBtn.addEventListener("click", makePage);
          var soakBtn = document.querySelector("#soak-btn")
          soakBtn.addEventListener("click", soakDone);
-         var bloomBtn = document.querySelector("#bloom-btn")
-         bloomBtn.addEventListener("click", bloomDone);
+         // var bloomBtn = document.querySelector("#bloom-btn")
+         // bloomBtn.addEventListener("click", bloomDone);
          var pourBtn = document.querySelector("#pour-btn")
          pourBtn.addEventListener("click", startTimer);
          var enjoyBtn = document.querySelector("#enjoy-btn")
@@ -258,10 +304,10 @@
             soakBtn.classList.add("action-btn-done");
          }
 
-         function bloomDone(event) {
-            event.preventDefault();
-            bloomBtn.classList.add("action-btn-done");
-         }
+         // function bloomDone(event) {
+         //    event.preventDefault();
+         //    bloomBtn.classList.add("action-btn-done");
+         // }
 
          function startTimer(event) {
             event.preventDefault();
