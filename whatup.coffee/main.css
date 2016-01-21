@@ -1,0 +1,267 @@
+html, body {
+   height: 100%;
+   min-height: 100%;
+   position: relative;
+   font-family: "proxima-nova",sans-serif;
+}
+
+.wrap {
+   height: 100%;
+}
+
+.left-col {
+   width: 50%;
+   float: left;
+   height: 100%;
+   position: relative;
+   -webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+   display: block;
+   background-color: #fff;
+}
+
+.right-col {
+   height: 100%;
+   overflow: scroll;
+}
+
+.title h1 {
+   position: relative;
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+   font-size: 96px;
+   font-weight: 900;
+   line-height: 100px;
+   color: #000;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.title .next-btn {
+   position: relative;
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+   text-align: center;
+   display: block;
+   margin: 0 auto;
+}
+
+.next-btn {
+   font-weight: 700;
+   color: #000;
+   font-size: 16px;
+   background-color: #fff;
+   border-radius: 24px;
+   border: 1px solid #000;
+   padding: 12px 24px 12px 24px;
+   text-decoration: none;
+   width: 100px;
+   cursor: pointer;
+}
+
+.next-btn:hover {
+   transition: 0.25s;
+   background-color: #000;
+   color: #fff;
+}
+
+.headline {
+   font-weight: 700;
+}
+
+.content {
+   margin-right: 120px;
+   max-width: 600px;
+   margin-top: 20px;
+   line-height: 20px;
+   font-weight: 400;
+}
+
+.content a {
+   background-position: 0 1.375rem;
+   background-size: 1px 1px;
+   color: #333;
+   background-image: linear-gradient(#fff 50%, #fff 50%);
+   background-repeat: repeat-x;
+}
+
+.content-img {
+   margin-top: 20px;
+   width: 100%;
+   height: 100%;
+}
+
+.main {
+   margin-top: 140px;
+}
+
+.header {
+   float: right;
+   margin-right: 20px;
+   margin-top: 34px;
+}
+
+.hide {
+   display: none;
+}
+
+.action-btn {
+   margin-top: 24px;
+   display: block;
+   font-weight: 700;
+   color: green;
+   font-size: 16px;
+   background-color: #fff;
+   border-radius: 24px;
+   border: 1px solid green;
+   padding: 12px 24px 12px 24px;
+   text-decoration: none;
+   width: 100px;
+   cursor: pointer;
+   margin-bottom: 48px;
+}
+
+.action-btn:hover {
+   transition: 0.25s;
+   background-color: green;
+   color: #fff;
+}
+
+.action-btn-done {
+   background-color: green;
+   color: #fff;
+}
+
+.timer-modal {
+   background-color: rgba(255, 255, 255, 0.9);
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+}
+
+.timer-value {
+   margin: 200px auto 40px auto;
+   font-size: 200px;
+   font-weight: 100;
+   color: #000;
+   max-width: 400px;
+}
+
+.caution {
+   color: orange;
+}
+
+.burnt {
+   color: red;
+}
+
+.close-btn {
+   margin: 0 auto;
+}
+
+#minutes {
+   display: block;
+   float: left;
+}
+
+#seconds {
+   display: block;
+   float: left;
+}
+
+#colon {
+   display: block;
+   float: left;
+}
+
+.clear {
+   clear: both;
+}
+
+.facebook, .twitter, .tumblr {
+   width: 140px;
+   display: inline;
+}
+
+.facebook {
+   border: 1px solid #3b5998;
+   color: #3b5998;
+}
+
+.facebook:hover {
+   background-color: #3b5998;
+   color: #fff;
+}
+
+.twitter {
+   border: 1px solid #4099ff;
+   color: #4099ff;
+   margin-left: 24px;
+}
+
+.twitter:hover {
+   background-color: #4099ff;
+   color: #fff;
+}
+
+.tumblr {
+   border: 1px solid #36465d;
+   color: #36465d;
+   margin-left: 24px;
+}
+
+.tumblr:hover {
+   background-color: #36465d;
+   color: #fff;
+}
+
+.form-message {
+   margin-top: 12px;
+   border-radius: 44px;
+   box-shadow: none;
+   border: 1px solid #000;
+   height: 44px;
+   width: 400px;
+   font-size: 16px;
+   padding-left: 16px;
+   float: left;
+   outline: none;
+}
+
+.form-btn {
+   width: 140px;
+   margin-top: 12px;
+   display: inline;
+   margin-left: 16px;
+}
+
+.container {
+   margin-bottom: 48px;
+}
+
+.time {
+   font-weight: 700;
+   margin-bottom: -14px;
+}
+
+.share-buttons {
+   margin-top: 30px;
+   margin-bottom: 60px;
+}
+
+.leave-comment {
+   margin-bottom: 60px;
+}
+
+.comments {
+   padding-top: 40px;
+}

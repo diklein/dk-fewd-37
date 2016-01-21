@@ -1,10 +1,78 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8">
-      <title></title>
-   </head>
-   <body>
-      
-   </body>
+<head>
+   <meta charset="utf-8">
+   <title></title>
+   <script type="text/javascript"></script>
+   <style media="screen">
+      #login {
+         background-color: #3b5998;
+         color: #fff;
+         border-radius: 20px;
+         height: 40px;
+         width: 100px;
+         border: none;
+         font-weight: bold;
+         cursor: pointer;
+         font-size: 16px;
+      }
+
+      #login:hover {
+         background-color: #3c6999;
+         transition-duration: 0.25s;
+      }
+      li {
+         padding-bottom: 24px;
+      }
+
+   </style>
+</head>
+<body>
+
+   <button type="button" id="login">Log in</button>
+   <ul id="events"></ul>
+
+   <script>
+
+      // event listener
+      document.querySelector("button").addEventListener("click", function(event) {
+         FB.login(function(response) {
+            if (response.authResponse) {
+               console.log('Welcome!  Fetching your information.... ');
+               FB.api('/me', function(response) {
+                  console.log('Good to see you, ' + response.name + '.');
+               });
+               FB.api("/me/events", function(response) {
+                  var ul = document.querySelector("#events");
+                  for (var i = 0; i < response.data.length; i++) {
+                     var li = document.createElement("li");
+                     li.textContent = response.data[i].name;
+                     ul.appendChild(li);
+                  };
+               });
+            } else {
+               console.log('User cancelled login or did not fully authorize.');
+            }
+         }, { scope : "user_events" });
+      }); // end of event listener
+
+      // facebook init
+      window.fbAsyncInit = function() {
+         FB.init({
+            appId      : '1690115227893582',
+            xfbml      : true,
+            version    : 'v2.5'
+         });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+   </script>
+</body>
 </html>
