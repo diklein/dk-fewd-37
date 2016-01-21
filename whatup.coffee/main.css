@@ -187,7 +187,7 @@ html, body {
    clear: both;
 }
 
-.facebook, .twitter, .tumblr {
+.facebook, .twitter {
    width: 140px;
    display: inline;
 }
@@ -210,17 +210,6 @@ html, body {
 
 .twitter:hover {
    background-color: #4099ff;
-   color: #fff;
-}
-
-.tumblr {
-   border: 1px solid #36465d;
-   color: #36465d;
-   margin-left: 24px;
-}
-
-.tumblr:hover {
-   background-color: #36465d;
    color: #fff;
 }
 
